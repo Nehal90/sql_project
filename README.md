@@ -1,1 +1,1 @@
-# db_project
+# sql_project
