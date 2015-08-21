@@ -1,0 +1,4 @@
+CREATE TABLE S 
+( INOA	Char (8),
+  INOB	Char (8),
+PRIMARY KEY (INOA, INOB));

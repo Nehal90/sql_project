@@ -1,0 +1,3 @@
+INSERT
+INTO I
+VALUES ('1055444', 'Ipad', '02/16/10', 'Y', 'USA', 'Small laptop')

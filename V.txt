@@ -1,0 +1,6 @@
+CREATE TABLE V
+( VNO		Char (7) Primary Key,
+  NAME	Varchar2 (60) Not Null,
+  RATING	Char (1),
+  TYPE	Varchar2 (20),
+  COUNTRY	Varchar2 (40));

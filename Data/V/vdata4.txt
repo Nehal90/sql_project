@@ -1,0 +1,3 @@
+INSERT
+INTO V
+VALUES ('1002220, 'Morris Inc', '3', 'Televisions', 'Japan');

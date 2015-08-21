@@ -1,0 +1,14 @@
+CREATE TABLE B  
+( SALENO	Char (8),
+  INO		Char (7),
+  BDATE	Char (8),
+  CNO		Char (8),
+  PRICE	Char (8),
+  VNO		Char (7),
+  PRIMARY KEY (SALENO, INO, BDATE),
+  FOREIGN KEY (VNO),
+  References V (VNO),
+  FOREIGN KEY (INO),
+  References I (INO),
+  FOREIGN KEY (CNO),
+  References C (CNO));

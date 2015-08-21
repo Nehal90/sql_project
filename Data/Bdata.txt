@@ -1,0 +1,60 @@
+SQL> start b1.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b2.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b3.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b4.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b5.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b6.txt
+Input truncated to 77 characters
+INTO B
+     *
+ERROR at line 2:
+ORA-02291: integrity constraint (HL664027.SYS_C00137838) violated - parent key 
+not found 
+
+
+SQL> start b6.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b7.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b8.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b9.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> start b10.txt
+Input truncated to 78 characters
+
+1 row created.
+
+SQL> exit

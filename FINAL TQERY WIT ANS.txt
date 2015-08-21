@@ -1,0 +1,407 @@
+a)  Find the name and number of all banks who have a PRESIDENT who has no bank accounts.
+
+     ANS:
+
+
+        SELECT BNO,BNAME
+        FROM B
+        WHERE PRESIDENT NOT IN
+        (
+         SELECT PNO 
+         FROM PER_A );
+
+
+
+
+                     SQL> SELECT BNO,BNAME
+                       2  FROM B
+                       3  WHERE PRESIDENT NOT IN
+                       4  ( SELECT PNO
+                       5  FROM PER_A);
+
+          
+                  BNO BNAME
+           ---------- --------------------
+                98493 FEDERAL CREDIT
+                98494 CHASE
+                98495 FULTON BANK
+
+
+
+#############################################################################################################################################################
+
+b)   I have a new employee named Jones who works for an existing company. Create a new checking account for Jones with a starting balance of $100. 
+     Jones had not been an existing customer. This is an individual account. This account should have direct deposit from Jones' company. 
+     Do not provide a start date. For all other values, provide the appropriate values using your existing data in your tables. 
+     Write the needed DML to accomplish everything that it stated or implied in this question.
+     
+
+    ANS:    INSERT INTO A
+	    SELECT 
+	    EA.ANO,EA.BNO,
+	   'CHECKING' as TYPE,
+	   'INDIVIDUAL' as CATEGORY,
+	   'Y' as DD,
+	   NULL as START_DATE,
+	   NULL as CLOSED_DATE,
+	   100.00 as BALANCE,
+	  'ACTIVE' as STATUS
+	   from E, EMP_A EA
+	   where E.ENO=EA.ENO
+	   and ENAME='JONES';
+
+
+
+
+
+                 SQL> INSERT INTO A
+                   2  SELECT
+                   3  EA.ANO,EA.BNO,
+                   4  'CHECKING' as TYPE,
+                   5  'INDIVIDUAL' as CATEGORY,
+                   6  'Y' as DD,
+                   7  NULL as START_DATE,
+                   8  NULL as CLOSED_DATE,
+                   9  100.00 as BALANCE,
+                  10  'ACTIVE' as STATUS
+                  11  from E, EMP_A EA
+                  12  where E.ENO=EA.ENO
+                  13  and ENAME='JONES';
+
+                   
+                    1 row created.
+   
+
+
+           
+
+
+
+
+
+
+
+
+################################################################################################################################################################
+
+
+c)   Find the name and number of all companies who have used every bank. 
+
+	
+
+  ANS:     select c.CNO,c.CNAME 
+           from c
+           where c.cno IN 
+          (select cno 
+           from cb 
+           group by cno 
+           having count(*)=(select count(bno) from b ));  
+
+
+         SQL> select c.cno,c.cname
+           2  from c
+           3  where c.cno IN
+           4  (select cno
+           5  from cb
+           6  group by cno
+           7  having count(*)=(select count(bno) from b));
+
+    
+
+                    CNO CNAME
+             ---------- --------------------
+                  12555 APPLE COMPUTERS INC
+                  12558 ATT
+
+
+
+
+
+
+
+
+
+
+
+
+##############################################################################################################################################################
+
+
+
+d)  Find the name and number of all personnel whose name begins with a "Z" or ends with an "S". Consider all names in upper case.
+
+
+
+  ANS:   select UPPER(NAME),pno
+         from P 
+	 where UPPER(NAME) like 'Z%' 
+	 OR UPPER(NAME) LIKE '%S';
+
+
+       
+             SQL> select UPPER(NAME),PNO
+                2  from P
+                3  where UPPER(NAME) like'Z%'
+                4  OR UPPER(NAME) like'%S';
+
+             UPPER(NAME)                 PNO
+             -------------------- ----------
+             STEVE JOBS                78629
+             MICHELLE BREES            78653
+             ZOE MCNAMEE                 816
+             BRIAN WILLIAMS              819
+
+
+
+
+
+
+
+
+
+##############################################################################################################################################################
+
+	
+e)   What is the name and number of all employees who earn the lowest salary in companies
+
+
+    ANS:    select ENO,ENAME 
+            from e, c                            
+            where e.cno=c.cno                                    
+            and e.salary IN 
+           (SELECT MIN(SALARY)
+            from E 
+            group by CNO);
+
+       
+
+        
+       SQL> select ENO,ENAME
+         2  from e,c
+         3  where e.cno=c.cno
+         4  and e.salary IN
+         5  (select MIN(SALARY)
+         6  from E
+         7  group by CNO);
+
+ 
+
+             ENO ENAME
+      ---------- ----------
+           75214 TAN M
+           99120 JONES
+           69250 CHLOE T
+           87651 TONY T
+           88214 TOMMY M
+
+
+
+
+
+
+
+
+
+
+####################################################################################################
+
+
+
+f)  Find the name and number of all customers who are not employees and who are not personnel. 
+
+
+  ANS:      SELECT CUST_NO,CUST_NAME
+            FROM CUST
+            WHERE CUST_NO NOT IN
+           (SELECT CUST_NO
+            FROM EMP_CUST)
+            AND CUST_NO NOT IN
+           (SELECT CUST_NO
+            FROM PER_CUST);
+
+
+
+
+
+        SQL> SELECT CUST_NO,CUST_NAME
+          2  FROM CUST
+          3  WHERE CUST_NO NOT IN
+          4  (SELECT CUST_NO
+          5  FROM EMP_CUST)
+          6  AND CUST_NO NOT IN
+          7  (SELECT CUST_NO
+          8  FROM PER_CUST);
+  
+  
+
+             CUST_NO CUST_NAME
+          ---------- --------------------
+               19100 JOHN REID
+               20100 MARK SANCHEZ
+               12100 CHAD JOHNSON
+               15100 LELA FREDERICK
+
+
+
+     
+
+
+
+#####################################################################################
+
+
+g)  Create a view that finds the number of all ATM machines that have never been used for deposits. Create a view that finds the number of all ATM machines that have never been used for withdrawals. Now, using these two views find all ATM machines that have never been used for deposits and have never been used for withdrawals.
+
+    ANS:   CREATE VIEW ATM_ND
+           AS SELECT ATM_NO
+           FROM ATM
+           WHERE ATM_NO NOT IN
+          (SELECT ATM_NO
+           FROM T
+           WHERE TYPE='D'
+           AND CAT='A');     
+
+
+
+           CREATE VIEW ATM_NW
+           AS SELECT ATM_NO
+           FROM ATM
+           WHERE ATM_NO NOT IN
+          (SELECT ATM_NO
+           FROM T
+           WHERE TYPE='W'
+           AND CAT='A');    
+
+
+
+           SELECT ATM_ND.ATM_NO
+           FROM ATM_ND,ATM_NW
+           WHERE ATM_ND.ATM_NO=ATM_NW.ATM_NO;  
+
+
+
+
+
+
+
+            SQL> CREATE  VIEW ATM_ND
+              2  AS SELECT ATM_NO
+              3  FROM ATM
+              4  WHERE ATM_NO NOT IN
+              5  (SELECT ATM_NO
+              6  FROM T
+              7  WHERE TYPE='D'
+              8  AND CAT='A');      
+
+        
+             View created.
+
+
+
+
+
+            SQL> CREATE VIEW ATM_NW
+              2  AS SELECT ATM_NO
+              3  FROM ATM
+              4  WHERE ATM_NO NOT IN
+              5  (SELECT ATM_NO
+              6  FROM T
+              7  WHERE TYPE='W'
+              8  AND CAT='A');  
+
+   
+            View created.
+
+
+
+         SQL> SELECT ATM_ND.ATM_NO
+           2  FROM ATM_ND,ATM_NW
+           3  WHERE ATM_ND.ATM_NO=ATM_NW.ATM_NO;
+  
+    
+
+          ATM_NO
+      ----------
+           12130
+           12140
+           12150
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+h)  Find the name and number of all customers that have never used an online transaction. 
+
+   ANS:    SELECT CUST.CUST_NO,CUST_NAME
+           FROM CUST
+           WHERE CUST.CUST_NO NOT IN
+          (SELECT CUST_NO  
+           FROM CUST_A,T 
+           WHERE ANO=FROM_ANO 
+           AND CAT='O');
+
+
+
+       
+
+       SQL> SELECT CUST.CUST_NO,CUST_NAME
+         2  FROM CUST
+         3  WHERE CUST.CUST_NO NOT IN
+         4 (SELECT CUST_NO
+         5  FROM CUST_A,T
+         6  WHERE ANO=FROM_ANO
+         7  AND CAT='O');
+  
+
+
+
+         CUST_NO CUST_NAME
+      ---------- --------------------
+           19100 JOHN REID
+           20100 MARK SANCHEZ
+           12100 CHAD JOHNSON
+           13100 GWEN PARKER
+           14100 RITA ABBOT
+           15100 LELA FREDERICK
+           17100 JOHN STANKEY
+           18100 MARSHA WILSON
+
+
+            8 rows selected.
+
+
+
+
+##################################################################################
+i)  Find the name and number of companies that have the most employees. 
+
+    ANS:   SELECT c.CNO,CNAME
+           FROM C,E
+           where C.CNO=E.CNO
+           GROUP  BY c.CNO,CNAME
+           HAVING count(eno)=(select max(count(eno)) from e group by cno);
+
+
+
+
+
+      SQL> SELECT c.CNO,CNAME
+       2   FROM C,E
+       3   where C.CNO=E.CNO
+       4   GROUP  BY c.CNO,CNAME
+       5   HAVING count(eno)=(select max(count(eno)) from e group by cno);
+
+    
+
+                CNO CNAME
+         ---------- --------------------
+              12557 DELL
+
+ 

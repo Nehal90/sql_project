@@ -1,0 +1,7 @@
+CREATE TABLE P
+( PNO		Char (7),
+  INO		Char (7),
+  PDATE	Char (8),
+  PRIMARY KEY (PNO, INO),
+  FOREIGN KEY (INO),
+  References I (INO));

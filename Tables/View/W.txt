@@ -1,0 +1,5 @@
+SQL> start W.txt
+
+Table created.
+
+SQL> spool table.lst

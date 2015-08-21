@@ -1,0 +1,3 @@
+INSERT
+INTO V
+VALUES ('V03', 'Gerry Inc', '4', 'Cars', 'India');

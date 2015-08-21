@@ -1,0 +1,57 @@
+SQL> start wdata1.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata2.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata3.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata4.txt
+Input truncated to 29 characters
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> start wdata4.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata5.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata6.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata7.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata8.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata9.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> start wdata10.txt
+Input truncated to 30 characters
+
+1 row created.
+
+SQL> spool pdata.lst

@@ -1,0 +1,12 @@
+CREATE TABLE A
+( ANO		Char (7),
+  INO		Char (7),
+  ADATE	Char (8),
+  ENO		Char (8),
+  VALUE	Char (8),
+  FEE		Char (6),
+  PRIMARY KEY (ANO, INO),
+  FOREIGN KEY (INO),
+  References I (INO),
+  FOREIGN KEY (ENO),
+  References E (ENO));

@@ -1,0 +1,51 @@
+SQL> start c1.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start c2.txt
+Input truncated to 38 characters
+
+1 row created.
+
+SQL> start c3.txt
+Input truncated to 38 characters
+
+1 row created.
+
+SQL> start c4.txt
+Input truncated to 45 characters
+
+1 row created.
+
+SQL> start c5.txt
+Input truncated to 43 characters
+
+1 row created.
+
+SQL> start c6.txt
+Input truncated to 48 characters
+
+1 row created.
+
+SQL> start c7.txt
+Input truncated to 46 characters
+
+1 row created.
+
+SQL> start c8.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start c9.txt
+Input truncated to 44 characters
+
+1 row created.
+
+SQL> start c10.txt
+Input truncated to 41 characters
+
+1 row created.
+
+SQL> exit

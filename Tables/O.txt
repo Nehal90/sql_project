@@ -1,0 +1,14 @@
+CREATE TABLE O
+( INO		Char (7),
+  CNO		Char (8),
+  SALENO	Char (8),
+  VNO		Char (7),
+  PRIMARY KEY (INO),
+  FOREIGN KEY (INO),
+  References I (INO),
+  FOREIGN KEY (CNO),
+  References C (CNO),
+  FOREIGN KEY (SALENO),
+  References B (SALENO),
+  FOREIGN KEY (VNO),
+  References V (VNO));

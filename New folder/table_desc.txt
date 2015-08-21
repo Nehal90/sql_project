@@ -1,0 +1,103 @@
+Part I:
+Description of the Tables
+
+
+SQL> desc V
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ VNO                             NOT NULL CHAR(2)
+ NAME                            NOT NULL VARCHAR2(60)
+ RATING                                   CHAR(1)
+ TYPE                                     VARCHAR2(20)
+ COUNTRY                                  VARCHAR2(40)
+
+SQL> desc I
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ INO                             NOT NULL CHAR(3)
+ NAME                            NOT NULL VARCHAR2(60)
+ IDATE                                    CHAR(8)
+ HAS_PNO                                  VARCHAR2(2)
+ COUNTRY                                  VARCHAR2(40)
+ DESCRIPTION                              VARCHAR2(300)
+
+SQL> desc W
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ VNO                             NOT NULL CHAR(3)
+ INO                             NOT NULL CHAR(3)
+
+SQL> desc P
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ PNO                             NOT NULL CHAR(3)
+ INO                             NOT NULL CHAR(3)
+ PDATE                                    CHAR(8)
+
+SQL> desc B
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ SALENO                          NOT NULL CHAR(3)
+ INO                                      CHAR(3)
+ BDATE                                    CHAR(8)
+ CNO                                      CHAR(3)
+ PRICE                                    CHAR(4)
+ VNO                                      CHAR(3)
+
+SQL> desc R
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ REQNO                           NOT NULL CHAR(3)
+ INO                                      CHAR(3)
+ RDATE                                    CHAR(8)
+ CNO                                      CHAR(3)
+ PRICE                                    CHAR(3)
+ EDATE                                    CHAR(8)
+ CANCEL                                   VARCHAR2(1)
+ VNO                                      CHAR(7)
+
+SQL> start A.txt
+
+Table created.
+
+SQL> desc C
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ CNO                             NOT NULL CHAR(3)
+ CNAME                           NOT NULL VARCHAR2(60)
+ COUNTRY                                  VARCHAR2(40)
+
+SQL> desc O
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ INO                             NOT NULL CHAR(3)
+ CNO                                      CHAR(3)
+ SALENO                                   CHAR(3)
+ VNO                                      CHAR(3)
+
+SQL> desc A
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ANO                             NOT NULL CHAR(3)
+ INO                             NOT NULL CHAR(3)
+ ADATE                                    CHAR(8)
+ ENO                                      CHAR(3)
+ VALUE                                    CHAR(4)
+ FEE                                      CHAR(4)
+
+SQL> desc E
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ENO                             NOT NULL CHAR(3)
+ ENAME                                    VARCHAR2(50)
+ COUNTRY                                  VARCHAR2(40)
+ RATING                                   CHAR(1)
+ CHARGE                                   CHAR(4)
+
+SQL> desc S
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ INOA                            NOT NULL CHAR(3)
+ INOB                            NOT NULL CHAR(3)
+
+SQL> exit

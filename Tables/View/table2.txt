@@ -1,0 +1,33 @@
+SQL> start P.txt
+
+Table created.
+
+SQL> start C.txt
+
+Table created.
+
+SQL> start B.txt
+
+Table created.
+
+SQL> start R.txt
+
+Table created.
+
+SQL> start O.txt
+
+Table created.
+
+SQL> start E.txt
+
+Table created.
+
+SQL> start A.txt
+
+Table created.
+
+SQL> start S.txt
+
+Table created.
+
+SQL> exit

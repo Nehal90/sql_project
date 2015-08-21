@@ -1,0 +1,75 @@
+SQL> start e1.txt
+Input truncated to 48 characters
+
+1 row created.
+
+SQL> start e2.txt
+Input truncated to 55 characters
+
+1 row created.
+
+SQL> start e3.txt
+Input truncated to 56 characters
+INTO E
+     *
+ERROR at line 2:
+ORA-00001: unique constraint (HL664027.SYS_C00137864) violated 
+
+
+SQL> start e3.txt
+Input truncated to 56 characters
+
+1 row created.
+
+SQL> start e4.txt
+Input truncated to 52 characters
+
+1 row created.
+
+SQL> start e5.txt
+Input truncated to 53 characters
+INTO E
+     *
+ERROR at line 2:
+ORA-00001: unique constraint (HL664027.SYS_C00137864) violated 
+
+
+SQL> start e6.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start e5.txt
+Input truncated to 53 characters
+
+1 row created.
+
+SQL> start e7.txt
+Input truncated to 52 characters
+INTO E
+     *
+ERROR at line 2:
+ORA-00001: unique constraint (HL664027.SYS_C00137864) violated 
+
+
+SQL> start e7.txt
+Input truncated to 52 characters
+
+1 row created.
+
+SQL> start e8.txt
+Input truncated to 57 characters
+
+1 row created.
+
+SQL> start e9.txt
+Input truncated to 47 characters
+
+1 row created.
+
+SQL> start e10.txt
+Input truncated to 53 characters
+
+1 row created.
+
+SQL> exit

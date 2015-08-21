@@ -1,0 +1,63 @@
+SQL> start o1.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o2.txrt
+unable to open file "o2.txrt"
+SQL> start o2.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o3.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o4.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start 05.txt
+unable to open file "05.txt"
+SQL> start o5.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o6.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o7.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o8.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o9.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start o9.txt
+Input truncated to 54 characters
+INTO O
+     *
+ERROR at line 2:
+ORA-00001: unique constraint (HL664027.SYS_C00137856) violated 
+
+
+SQL> start o10.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> exit

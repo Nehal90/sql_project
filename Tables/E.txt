@@ -1,0 +1,7 @@
+CREATE TABLE E
+( ENO		Char (8),
+  ENAME 	Varchar2 (50),
+  COUNTRY	Varchar2 (40),
+  RATING	Char (1),
+  CHARGE	Char (8),
+  PRIMARY KEY (ENO));

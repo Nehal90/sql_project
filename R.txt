@@ -1,0 +1,16 @@
+CREATE TABLE R  
+( REQNO	Char (8),
+  INO		Char (7),
+  RDATE	Char (8),
+  CNO		Char (8),
+  PRICE	Char (8),
+  EDATE	Char (8),
+  CANCEL	Char (1) Default ‘N’,
+  VNO		Char (7),
+  PRIMARY KEY (REQNO),
+  FOREIGN KEY (VNO),
+  References V (VNO),
+  FOREIGN KEY (INO),
+  References I (INO),
+  FOREIGN KEY (CNO),
+  References C (CNO));

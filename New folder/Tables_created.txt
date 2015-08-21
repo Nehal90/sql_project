@@ -1,0 +1,47 @@
+PART I: 
+
+SQL> start V.txt
+
+Table created.
+
+SQL> start I.txt
+
+Table created.
+
+SQL> start W.txt
+
+Table created.
+
+SQL> start P.txt
+
+Table created.
+
+SQL> start C.txt
+
+Table created.
+
+SQL> start E.txt
+
+Table created.
+
+SQL> start B.txt
+
+Table created.
+
+SQL> start R.txt
+
+Table created.
+
+SQL> start B.txt
+
+Table created.
+
+SQL> start O.txt
+
+Table created.
+
+SQL> start S.txt
+
+Table created.
+
+SQL> exit

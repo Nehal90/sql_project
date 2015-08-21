@@ -1,0 +1,3 @@
+INSERT
+INTO V
+VALUES ('V07', 'Microsoft', '2', 'Operating Systems', 'Paraguay');

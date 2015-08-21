@@ -1,0 +1,8 @@
+CREATE TABLE W 
+( VNO		Char (7),  
+  INO		Char (7),
+  PRIMARY KEY (VNO, INO),
+  FOREIGN KEY (VNO),
+  References V (VNO),
+  FOREIGN KEY (INO))
+  References I (INO));

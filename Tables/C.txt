@@ -1,0 +1,4 @@
+CREATE TABLE C
+( CNO		Char (8) Primary Key,
+  CNAME	Varchar2 (60) Not Null,
+  COUNTRY	Varchar2 (40));

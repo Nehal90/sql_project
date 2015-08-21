@@ -1,0 +1,3 @@
+INSERT
+INTO V
+VALUES ('1002201', 'Berry Inc', '4', 'Deli Slicer', 'Sweden');

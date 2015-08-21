@@ -1,0 +1,5 @@
+SQL> start V.txt
+
+Table created.
+
+SQL> exit

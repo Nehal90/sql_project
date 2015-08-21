@@ -1,0 +1,51 @@
+SQL> start p1.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p2.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p3.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p4.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p5.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p6.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p7.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p8.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p9.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> start p10.txt
+Input truncated to 40 characters
+
+1 row created.
+
+SQL> exit

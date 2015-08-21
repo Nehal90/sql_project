@@ -1,0 +1,59 @@
+SQL> start a1.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a2.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a3.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a4.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a5.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a6.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a7.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a8.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a9.txt
+Input truncated to 77 characters
+VALUES ('84845961', '4220776', '04/16/57', '11005469', '77542369', '002158')
+        *
+ERROR at line 3:
+ORA-01401: inserted value too large for column 
+
+
+SQL> start a9.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start a10.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> exit

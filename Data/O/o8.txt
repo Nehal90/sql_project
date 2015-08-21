@@ -1,0 +1,3 @@
+INSERT
+INTO O
+VALUES ('I08', 'C02', 'S24', '');

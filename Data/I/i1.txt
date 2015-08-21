@@ -1,0 +1,3 @@
+INSERT
+INTO I
+VALUES ('I01', 'Cell Phone', '05/16/62', 'Y', 'Russia', 'Makes Calls');

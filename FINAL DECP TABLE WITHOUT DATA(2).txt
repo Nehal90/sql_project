@@ -1,0 +1,313 @@
+
+
+SQL> DESC B;
+ 
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ BNO                             NOT NULL NUMBER(10)
+ BNAME                                    VARCHAR2(20)
+ PRESIDENT                                NUMBER(10)
+
+
+
+
+###########################################################################################
+
+
+
+
+SQL> DESC P
+ 
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ PNO                             NOT NULL NUMBER(10)
+ BNO                                      NUMBER(10)
+ SSNO                                     NUMBER(9)
+ DOB                                      DATE
+ NAME                                     VARCHAR2(20)
+ START_DATE                               DATE
+ POSITION                                 VARCHAR2(20)
+ SALARY                                   NUMBER(10,2)
+ ADDRESS                                  VARCHAR2(40)
+ CELL                                     NUMBER(10)
+ EMAIL                                    VARCHAR2(20)
+
+
+
+
+
+
+#############################################################################################
+
+
+
+
+SQL> DESC BR
+ 
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ BR_NO                           NOT NULL NUMBER(10)
+ BNO                             NOT NULL NUMBER(10)
+ ADDRESS                                  VARCHAR2(40)
+ PNO                                      NUMBER(10)
+
+
+
+
+###############################################################################################
+
+
+SQL> DESC C
+ 
+ 
+ 
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ CNO                             NOT NULL NUMBER(10)
+ CNAME                                    VARCHAR2(20)
+ ADDRESS                                  VARCHAR2(30)
+ CEO                                      NUMBER(10)
+
+
+################################################################################################
+
+
+SQL> DESC CB
+ 
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ CNO                             NOT NULL NUMBER(10)
+ BNO                             NOT NULL NUMBER(10)
+ START_DATE                               DATE
+
+
+##################################################################################################
+
+
+
+SQL> DESC CUST
+ 
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ CUST_NO                         NOT NULL NUMBER(10)
+ CUST_NAME                                VARCHAR2(20)
+ SSNO                                     NUMBER(9)
+ DOB                                      DATE
+ NAME                                     VARCHAR2(20)
+ ADDRESS                                  VARCHAR2(50)
+ START_DATE                               DATE
+ CELL                                     NUMBER(10)
+ EMAIL                                    VARCHAR2(25)
+ PHONE                                    NUMBER(10)
+
+
+#######################################################################################################
+
+
+SQL> DESC A
+ 
+Name                            Null?    Type
+ ------------------------------- -------- ----
+ ANO                             NOT NULL NUMBER(15)
+ BNO                             NOT NULL NUMBER(10)
+ TYPE                                     CHAR(11)
+ CATEGORY                                 CHAR(12)
+ DD                                       CHAR(1)
+ START_DATE                               DATE
+ CLOSED_DATE                              DATE
+ BALANCE                                  NUMBER(10,2)
+ STATUS                                   CHAR(10)
+
+
+
+#######################################################################################################
+
+
+SQL> DESC E
+ 
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ENO                             NOT NULL NUMBER(5)
+ CNO                             NOT NULL NUMBER(10)
+ SSNO                                     NUMBER(9)
+ DOB                                      DATE
+ ENAME                                    VARCHAR2(10)
+ START_DATE                               DATE
+ POSITION                                 VARCHAR2(20)
+ SALARY                                   NUMBER(10,2)
+ ADDRESS                                  VARCHAR2(40)
+ CELL                                     NUMBER(10)
+ EMAIL                                    VARCHAR2(25)
+ PHONE                                    NUMBER(10)
+
+
+
+
+##############################################################################################################
+
+
+SQL> DESC CUST_A
+ 
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ CUST_NO                         NOT NULL NUMBER(10)
+ ANO                             NOT NULL NUMBER(16)
+ BNO                             NOT NULL NUMBER(10)
+ START_DATE                               DATE
+
+
+############################################################################################################
+
+
+
+SQL> DESC EMP_A
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ENO                             NOT NULL NUMBER(10)
+ ANO                             NOT NULL NUMBER(16)
+ BNO                             NOT NULL NUMBER(10)
+ START_DATE                               DATE
+
+
+########################################################################################################
+
+
+SQL> DESC EMP_CUST
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ENO                             NOT NULL NUMBER(10)
+ CUST_NO                         NOT NULL NUMBER(10)
+
+
+
+#####################################################################################################
+
+SQL> DESC PER_A
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ PNO                             NOT NULL NUMBER(10)
+ ANO                             NOT NULL NUMBER(16)
+ BNO                             NOT NULL NUMBER(10)
+ START_DATE                               DATE
+
+
+########################################################################################################
+
+
+SQL> DESC PER_CUST
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ PNO                             NOT NULL NUMBER(10)
+ CUST_NO                         NOT NULL NUMBER(10)
+
+
+
+
+#####################################################################################################
+
+
+SQL> DESC ATM
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ ATM_NO                          NOT NULL NUMBER(15)
+ STREET                                   VARCHAR2(25)
+ CITY                                     VARCHAR2(15)
+ STATE                                    VARCHAR2(15)
+ COUNTRY                                  VARCHAR2(15)
+ BNO                                      NUMBER(10)
+
+
+########################################################################################################
+
+
+SQL> DESC L
+
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ LNO                             NOT NULL NUMBER(20)
+ INDATE                                   DATE
+ INTIME                                   CHAR(12)
+ USERID                                   VARCHAR2(25)
+ PASSWORD                                 VARCHAR2(25)
+ OUTDATE                                  DATE
+ OUTTIME                                  CHAR(12)
+ LOCATION                                 VARCHAR2(20)
+
+
+###################################################################################################################
+
+
+
+SQL> DESC T
+ 
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ TNO                             NOT NULL NUMBER(20)
+ TDATE                                    DATE
+ TTIME                                    CHAR(12)
+ TYPE                                     CHAR(4)
+ AMOUNT                                   NUMBER(10,2)
+ CAT                                      CHAR(3)
+ FROM_BNO                                 NUMBER(10)
+ TO_BNO                                   NUMBER(10)
+ FROM_ANO                                 NUMBER(16)
+ TO_ANO                                   NUMBER(16)
+ CASH                                     CHAR(4)
+ CCHECK                                   CHAR(6)
+ BR_NO                                    NUMBER(10)
+ ATM_NO                                   NUMBER(15)
+ ONLINE_NO                                NUMBER(20)
+
+
+
+
+
+####################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

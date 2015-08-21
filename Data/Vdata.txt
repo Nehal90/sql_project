@@ -1,0 +1,57 @@
+SQL> start vdata1.txt
+Input truncated to 62 characters
+
+1 row created.
+
+SQL> start vdata2.txt
+Input truncated to 57 characters
+
+1 row created.
+
+SQL> start vdata3.txt
+Input truncated to 56 characters
+
+1 row created.
+
+SQL> start vdata4.txt
+Input truncated to 61 characters
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> start vdata4.txt
+Input truncated to 62 characters
+
+1 row created.
+
+SQL> start vdata5.txt
+Input truncated to 58 characters
+
+1 row created.
+
+SQL> start vdata6.txt
+Input truncated to 51 characters
+
+1 row created.
+
+SQL> start vdata7.txt
+Input truncated to 65 characters
+
+1 row created.
+
+SQL> start vdata8.txt
+Input truncated to 54 characters
+
+1 row created.
+
+SQL> start vdata9.txt
+Input truncated to 57 characters
+
+1 row created.
+
+SQL> start vdata10.txt
+Input truncated to 55 characters
+
+1 row created.
+
+SQL> spool Idata.lst

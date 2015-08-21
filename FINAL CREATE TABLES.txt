@@ -1,0 +1,247 @@
+
+
+CREATE TABLE B(
+BNO DECIMAL(10) PRIMARY KEY,
+BNAME VARCHAR2(20),
+PRESIDENT DECIMAL(10));
+
+
+
+
+#########################################################################################
+
+
+
+CREATE TABLE P (
+PNO DECIMAL(10) PRIMARY KEY,
+BNO DECIMAL(10) REFERENCES B(BNO),
+SSNO DECIMAL(9),
+DOB DATE,
+NAME VARCHAR2(20),
+START_DATE DATE,
+POSITION VARCHAR2(20),
+SALARY NUMBER (10,2),
+ADDRESS VARCHAR2(25),
+CELL NUMBER (10),
+EMAIL VARCHAR2 (20));
+
+
+
+
+#########################################################################################
+
+
+CREATE TABLE BR(
+BR_NO DECIMAL(10),
+BNO DECIMAL(10) REFERENCES B(BNO),
+ADDRESS VARCHAR2(25),
+PNO DECIMAL(10),
+PRIMARY KEY(BR_NO,BNO));
+
+
+
+##############################################################################################
+
+
+
+CREATE TABLE C (
+CNO DECIMAL(10) PRIMARY KEY,
+CNAME VARCHAR2(20),
+ADDRESS VARCHAR2(25),
+CEO DECIMAL(10)
+);
+
+
+
+###########################################################################################
+
+
+CREATE TABLE CB (
+CNO DECIMAL(10) REFERENCES C(CNO),
+BNO DECIMAL(10) REFERENCES B(BNO),
+START_DATE DATE,
+PRIMARY KEY(CNO,BNO));
+
+
+
+################################################################################################
+
+
+
+CREATE TABLE CUST (
+CUST_NO DECIMAL(10) PRIMARY KEY,
+CUST_NAME VARCHAR2(20),
+SSNO DECIMAL(9),
+DOB DATE,
+NAME VARCHAR2(20),
+ADDRESS VARCHAR2(25),
+START_DATE DATE,
+CELL NUMBER (10),
+EMAIL VARCHAR2(20),
+PHONE NUMBER (10));
+
+
+
+##################################################################################################
+
+
+
+CREATE TABLE A ( 
+ANO DECIMAL(16),
+BNO DECIMAL(10) REFERENCES B(BNO),
+TYPE CHAR(15) CHECK (TYPE IN ('CHECKING','SAVINGS','MONEYMARKET')),
+CATEGORY CHAR(15)  CHECK(CATEGORY IN('INDIVIDUAL','JOINT','CORPORATE')), 
+DD CHAR(1)CHECK(DD IN('Y','N')),
+START_DATE DATE,
+CLOSED_DATE DATE,
+BALANCE DECIMAL(10,2),
+PRIMARY KEY(ANO,BNO)
+STATUS CHAR(10) CHECK(STATUS IN('ACTIVE','INACTIVE','CLOSED')));
+
+
+
+
+###################################################################################################
+
+
+
+
+CREATE TABLE E (
+ENO DECIMAL(10),
+CNO DECIMAL(10) REFERENCES C(CNO),
+SSNO DECIMAL(9),
+DOB DATE,
+ENAME VARCHAR2(20),
+START_DATE DATE,
+POSITION VARCHAR2(20),
+SALARY NUMBER (10,2),
+ADDRESS VARCHAR2(25),
+CELL NUMBER (10),
+EMAIL VARCHAR2(20),
+PHONE NUMBER (10),
+PRIMARY KEY(ENO,CNO));
+
+
+
+
+
+####################################################################################################
+
+
+
+
+CREATE TABLE CUST_A ( 
+CUST_NO DECIMAL(10),
+ANO DECIMAL(16),
+BNO DECIMAL(10),
+START_DATE DATE,
+PRIMARY KEY (CUST_NO,ANO,BNO),
+FOREIGN KEY (ANO,BNO) 
+REFERENCES A (ANO,BNO));
+
+
+
+
+#########################################################################################################
+
+
+
+
+CREATE TABLE EMP_A (
+ENO DECIMAL(10),
+ANO DECIMAL(16),
+BNO DECIMAL(10),
+START_DATE DATE,
+PRIMARY KEY (ENO, ANO, BNO));
+
+
+
+
+####################################################################################################
+
+
+
+
+CREATE TABLE EMP_CUST
+( ENO DECIMAL(10) ,
+CUST_NO DECIMAL(10),
+PRIMARY KEY(ENO,CUST_NO));
+
+
+
+####################################################################################################
+
+
+
+CREATE TABLE PER_A (
+PNO DECIMAL(10) REFERENCES P(PNO),
+ANO DECIMAL(16),
+BNO DECIMAL(10),
+START_DATE DATE,
+PRIMARY KEY(PNO,ANO,BNO),
+FOREIGN KEY(ANO,BNO) 
+REFERENCES A(ANO,BNO));
+
+
+
+
+######################################################################################################
+
+
+
+CREATE TABLE PER_CUST (
+PNO DECIMAL(10) REFERENCES P(PNO),
+CUST_NO DECIMAL(10) REFERENCES CUST(CUST_NO),
+PRIMARY KEY(PNO,CUST_NO));
+
+
+#######################################################################################################
+
+
+CREATE TABLE ATM (
+ATM_NO DECIMAL(15) PRIMARY KEY,
+STREET VARCHAR2(25),
+CITY VARCHAR2(15),
+STATE VARCHAR2(15),
+COUNTRY VARCHAR2(15),
+BNO DECIMAL(10) REFERENCES B(BNO));
+
+
+######################################################################################################
+
+
+CREATE TABLE L (
+LNO DECIMAL(20) PRIMARY KEY,
+INDATE DATE,
+INTIME CHAR(10),
+USERID VARCHAR2(25),
+PASSWORD VARCHAR2(25),
+OUTDATE DATE,
+OUTTIME CHAR(10),
+LOCATION VARCHAR2(20)
+);
+
+
+
+######################################################################################################### 
+
+
+
+CREATE TABLE T (
+TNO DECIMAL(20) Primary key,
+TDATE DATE,
+TTIME CHAR(12),
+TYPE CHAR(4) CHECK(TYPE IN('W','C','D','x')),
+AMOUNT DECIMAL(10,2),
+CAT CHAR (3) CHECK(CAT IN('O','A','T')),
+FROM_BNO DECIMAL(10),  
+TO_BNO DECIMAL(10),
+FROM_ANO DECIMAL(16),
+TO_ANO DECIMAL(16),
+CASH CHAR (4) CHECK(CASH IN('Y','N')),
+CCHECK CHAR(6) CHECK(CCHECK IN('Y','N')),
+BR_NO DECIMAL(10),
+ATM_NO DECIMAL(15) REFERENCES ATM(ATM_NO),
+ONLINE_NO DECIMAL(20) REFERENCES L(LNO),
+FOREIGN KEY(FROM_BNO,FROM_ANO)
+REFERENCES A(BNO,ANO));

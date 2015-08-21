@@ -1,0 +1,7 @@
+CREATE TABLE I
+( INO		Char (7) Primary Key,
+  NAME	Varchar2 (60) Not Null,
+  IDATE	Char (8),
+  HAS_PNO	Varchar2 (2),
+  COUNTRY	Varchar2 (40),
+  DESC	Varchar2 (300));

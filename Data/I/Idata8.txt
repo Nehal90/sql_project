@@ -1,0 +1,3 @@
+INSERT
+INTO I
+VALUES ('4550684', 'Orange soda', '09/01/57', 'Y', 'USA', 'Delicious drink');

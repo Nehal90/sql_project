@@ -1,0 +1,609 @@
+
+SQL> SELECT *
+  2  FROM B;
+
+       BNO BNAME                 PRESIDENT
+---------- -------------------- ----------
+     98491 BANK OF AMERICA           78627
+     98492 CITI BANK                 78628
+     98493 FEDERAL CREDIT            78629
+     98494 CHASE                     78630
+     98495 FULTON BANK               78631
+
+
+
+############################################################################################
+
+
+SQL> SELECT *
+  2  FROM P;
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+     78627      98491  223058943 22-NOV-65 JOHN STANKEY         26-MAR-05
+PRESIDENT                255999 1255 BOA WAY,CHARLOTTE,NC
+2045689000 jstankey@boa.com
+
+     78628      98492  516074382 22-JAN-79 MARSHA WILSON        09-JUL-01
+PRESIDENT                 65000 5155 UNIVERSITY DRIVE,TEANECK,NJ-07601
+2019685000 mwilson@citi.com
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+
+     78629      98493  613053999 05-AUG-59 STEVE JOBS           01-DEC-99
+PRESIDENT               1500000 1 RED OAK DRIVE,CUPERTINO,CA-79801
+7186891111 sjobs@fcbank.com
+
+     78630      98494  613053777 01-MAY-87 SAM BROWN            19-OCT-05
+PRESIDENT                 50000 4 RED OAK TERRACE,TEANECK,NJ-07601
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+5386891331 sbrown@chase.com
+
+     78631      98495  999888555 04-APR-80 FRED RED             29-JUL-08
+PRESIDENT                 15000 635 AMERICANLEGION DR,TEANECK,NJ-07601
+2819113256 fred@fultonbank.com
+
+     78650      98491  545054993 12-JAN-75 JEFFERY WILSON       26-JUN-01
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+BRANCH MANAGER            55999 14 WALL STREET,NEW YORK,NY
+2015689000 JWILSON@BOA.COM
+
+     78651      98491  689010431 22-OCT-69 REX RYAN             16-JUL-00
+BRANCH MANAGER            59999 5155 UNIVERSITY DRIVE,TEANECK,NJ-07601
+2017885000 RRYAN@BOA.COM
+
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+     78652      98491  678093142 13-FEB-72 ELI MANNING          06-JAN-03
+BRANCH MANAGER            65999 1 RED OAK DRIVE,CUPERTINO,CA-79801
+2093061000 EMANNING@BOA.COM
+
+     78653      98492  770010777 16-JUN-76 MICHELLE BREES       20-FEB-01
+BRANCH MANAGER            58999 1 TIMES SQUARE,NEW YORK,NY-10001
+2019100010 MBRESS@CITI.COM
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+
+     78654      98492  404093078 25-SEP-78 JUANITA GONZALEZ     26-JAN-05
+BRANCH MANAGER            59999 4 RED OAK TERRACE,TEANECK,NJ-07601
+2018885200 JGONZALEZ@CITI.COM
+
+     78655      98493  239019393 02-OCT-68 LAKSHMI REDDY        10-SEP-99
+BRANCH MANAGER            65000 344 RED OAK TRAIL,TEANECK,NJ-07601
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+2017302310 LREDDY@FCBANK.COM
+
+     78656      98494  577089532 20-AUG-71 KOBE BRYANT          08-AUG-01
+BRANCH MANAGER            54999 635 AMERICANLEGION DR,TEANECK,NJ-07601
+2017237777 KBRYANT@CHASE.COM
+
+       815      98491  347057362 06-JUN-85 JOHN REID            16-MAY-08
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+TELLER                    44499 10 BANK STREET,GERMANTOWN,MD-32111
+2079173070 JREID@BOA.COM
+
+       816      98491  368056212 23-APR-82 zoe McNAMEE          06-JUN-06
+TELLER                    40499 5155 UNIVERSITY DRIVE,TEANECK,NJ-07601
+2015176070 TMcNAMEE@BOA.COM
+
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+       818      98492  368056212 07-MAR-81 GREG WALKER          16-MAY-06
+TELLER                    40499 4 RED OAK TERRACE,TEANECK,NJ-07601
+2015176070 GWALKER@CITI.COM
+
+       819      98494  280056212 07-SEP-83 BRIAN WILLIAMS       10-JUL-07
+TELLER                    40499 635 AMERICANLEGION DR,TEANECK,NJ-07601
+2015176070 BWILLIAMS@CHASE.COM
+
+       PNO        BNO       SSNO DOB       NAME                 START_DAT
+---------- ---------- ---------- --------- -------------------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL
+---------- --------------------
+
+
+16 rows selected.
+
+
+
+
+#####################################################################################################################################
+
+
+
+
+SQL> SELECT *
+  2  FROM BR;
+
+     BR_NO        BNO ADDRESS                                         PNO
+---------- ---------- ---------------------------------------- ----------
+     80110      98491 14 WALL STREET,NEW YORK,NY                    78650
+     80111      98491 5155 UNIVERSITY DRIVE,TEANECK,NJ-07601        78651
+     80112      98491 1 RED OAK DRIVE,CUPERTINO,CA-79801            78652
+     80112      98492 1 TIMES SQUARE,NEW YORK,NY-10001              78653
+     80113      98492 4 RED OAK TERRACE,TEANECK,NJ-07601            78654
+     80114      98493 344 RED OAK TRAIL,TEANECK,NJ-07601            78655
+     80115      98494 635 AMERICANLEGION DR,TEANECK,NJ-07601        78656
+     80116      98495 1 AMERICAN DR,TEANECK,NJ-07601                78657
+
+8 rows selected.
+
+
+####################################################################################################################################
+
+
+
+SQL> SELECT *
+  2  FROM C;
+
+       CNO CNAME                ADDRESS                               CEO
+---------- -------------------- ------------------------------ ----------
+     12556 MICROSOFT            7 BLUE DR,BOSTON,MA-54701           69251
+     12557 DELL                 9 RIVER ST,AUSTIN,TX-45801          69252
+     12558 ATT                  675 ATT DR,ATLANTA,GA-30375         69253
+     12559 MACYS                10 MAIN ST,NEW YORK,NY-10051        69254
+     12555 APPLE COMPUTERS INC  1 OAK DR,CUPERTINO,CA-79801         69250
+
+
+
+#####################################################################################################################################
+
+
+SQL> SELECT *
+  2  FROM CB;
+
+       CNO        BNO START_DAT
+---------- ---------- ---------
+     12555      98494 05-MAY-79
+     12556      98492 22-JUN-66
+     12557      98493 19-JUL-85
+     12558      98494 15-AUG-66
+     12558      98492 15-AUG-66
+     12555      98491 05-MAY-79
+     12559      98495 01-SEP-80
+     12555      98492 06-JAN-75
+     12555      98493 08-JUN-70
+     12555      98495 26-SEP-79
+     12558      98491 16-OCT-69
+
+       CNO        BNO START_DAT
+---------- ---------- ---------
+     12558      98493 18-NOV-80
+     12558      98495 15-AUG-79
+
+13 rows selected.
+
+
+########################################################################################################################################
+
+
+
+SQL> SELECT *
+  2  FROM CUST;
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+     19100 JOHN REID             934017717
+17 DEER CREEK PL,EDISON,NJ-07011
+NULL
+
+     20100 MARK SANCHEZ          691063317
+17 DEER CREEK PL,SOUTH PLAINSFIELD,NJ-07011
+NULL
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+
+     12100 CHAD JOHNSON          888999777 05-APR-88 JOHN REID
+17 BAKER,GERMANTOWN,MD-32110                       03-APR-08 3334445555
+CJ@GMAIL.COM              3231111111
+
+     13100 GWEN PARKER           129857892 28-NOV-67 JOHN REID
+29 PRICE,TEANECK,NJ-32110                          30-DEC-05 2017659087
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+GP1128@GMAIL.COM          7702017631
+
+     14100 RITA ABBOT            798024539 17-AUG-83 TIM McNAMEE
+26 CODD,TEANECK,NJ-07601                           30-SEP-10 2012331111
+R.ABBOT@GMAIL.COM         2011980611
+
+     15100 LELA FREDERICK        219409139 27-NOV-79 GREG WALKER
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+8 MAIN ST,ATLNTA,GA-11234                          10-JAN-09 7706554321
+LELAF@GMAIL.COM           5428897601
+
+     17100 JOHN STANKEY          223058943 22-NOV-65 JOHN REID
+11 RIVER RD,LODI,NJ-07601                          20-MAR-85 2045689000
+jstankey@boa.com          2019303021
+
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+     18100 MARSHA WILSON         516074382 22-JAN-79 GREG WALKER
+1 MAIN STREET,NEW YORK,NY-10001                    20-MAR-85 2019685000
+mwilson@citi.com          2019273078
+
+     16100 NICOLE KIDMAN         209169099 07-MAY-61 BRIAN WILLIAMS
+1 RIVER RD,LODI,NJ-07601                           25-MAY-07 5554442121
+NIKKIKIDMAN@GMAIL.COM     2016784321
+
+   CUST_NO CUST_NAME                  SSNO DOB       NAME
+---------- -------------------- ---------- --------- --------------------
+ADDRESS                                            START_DAT       CELL
+-------------------------------------------------- --------- ----------
+EMAIL                          PHONE
+------------------------- ----------
+
+
+9 rows selected.
+
+
+
+##############################################################################################################################
+
+
+
+
+SQL> SELECT *
+  2  FROM A;
+
+       ANO        BNO TYPE        CATEGORY     D START_DAT CLOSED_DA    BALANCE
+---------- ---------- ----------- ------------ - --------- --------- ----------
+STATUS
+----------
+8756234132      98492 SAVINGS     JOINT        Y 18-OCT-05               500000
+ACTIVE
+
+5128643098      98493 MONEYMARKET CORPORATE    N 18-OCT-05               500000
+ACTIVE
+
+2870285402      98494 SAVINGS     JOINT        Y 22-JAN-99 12-MAY-08
+CLOSED
+
+
+       ANO        BNO TYPE        CATEGORY     D START_DAT CLOSED_DA    BALANCE
+---------- ---------- ----------- ------------ - --------- --------- ----------
+STATUS
+----------
+4611424890      98495 MONEYMARKET INDIVIDUAL   Y 08-AUG-98                   10
+INACTIVE
+
+5533031071      98491 CHECKING    INDIVIDUAL   Y 27-JAN-86               150000
+ACTIVE
+
+2232310409      98491 CHECKING    INDIVIDUAL   Y 03-APR-08                15000
+ACTIVE
+
+
+       ANO        BNO TYPE        CATEGORY     D START_DAT CLOSED_DA    BALANCE
+---------- ---------- ----------- ------------ - --------- --------- ----------
+STATUS
+----------
+ 102133713      98492 CHECKING    INDIVIDUAL   Y 27-JUN-79            153400.67
+ACTIVE
+
+5529391101      98493 CHECKING    INDIVIDUAL   Y                            100
+ACTIVE
+
+
+8 rows selected.
+
+
+########################################################################################################
+
+
+
+
+SQL> SELECT *
+  2  FROM E;
+
+       ENO        CNO       SSNO DOB       ENAME      START_DAT
+---------- ---------- ---------- --------- ---------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL                          PHONE
+---------- ------------------------- ----------
+     75214      12556  876301876 19-NOV-80 TAN M      05-JAN-90
+Clerk                     14000 1 RIVEREDGE,LODI,NJ-24353
+6931289999 T@YAHOO.COM               4403435678
+
+     99873      12557  875210984 25-JAN-70 JOHNY N    16-NOV-00
+MANAGER                  500000 9 PARKSIDE,LODI,NJ-07601
+2018765431 JH@YAHOO.COM              2017865098
+
+       ENO        CNO       SSNO DOB       ENAME      START_DAT
+---------- ---------- ---------- --------- ---------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL                          PHONE
+---------- ------------------------- ----------
+
+     87651      12558  984512132 22-JUL-65 TONY T     25-DEC-99
+TELLER                    60000 9 MAIN ST,LODI,NJ-07601
+7706547807 TB@YAHOO.COM              2014405643
+
+     69250      12555  123444555 05-JUN-87 CHLOE T    05-JAN-90
+CEO                       30000 6 OAK AVE,AUSTIN,NY-24353
+
+       ENO        CNO       SSNO DOB       ENAME      START_DAT
+---------- ---------- ---------- --------- ---------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL                          PHONE
+---------- ------------------------- ----------
+4748888888 CT@YAHOO.COM              6123344440
+
+     88214      12559  786876092 03-JAN-84 TOMMY M    08-JUL-07
+MANAGER                 1900000 3 PARAMUS,LODI,NJ-07601
+9087654543 MIB@YAHOO.COM             1236754563
+
+     99120      12557  612041555 15-MAY-81 JONES      05-JAN-03
+
+       ENO        CNO       SSNO DOB       ENAME      START_DAT
+---------- ---------- ---------- --------- ---------- ---------
+POSITION                 SALARY ADDRESS
+-------------------- ---------- ----------------------------------------
+      CELL EMAIL                          PHONE
+---------- ------------------------- ----------
+CUTOMER SERVICE REP       29000 9 RIVER ST,AUSTIN,TX-45801
+9738631358 JONES@DELL.COM            9737981450
+
+
+6 rows selected.
+
+
+
+#########################################################################################################################
+
+
+
+SQL> SELECT *
+  2  FROM CUST_A;
+
+   CUST_NO        ANO        BNO START_DAT
+---------- ---------- ---------- ---------
+     12100 2232310409      98491 07-JUN-88
+     13100 8756234132      98492 07-MAR-80
+     14100 5128643098      98493 07-APR-83
+     15100 2870285402      98494 23-FEB-88
+     16100 4611424890      98495 07-OCT-76
+     17100 5533031071      98491 07-OCT-76
+     18100  102133713      98492 27-JUN-79
+
+7 rows selected.
+
+
+
+#############################################################################################################
+
+
+
+SQL> SELECT *
+  2  FROM EMP_A;
+
+       ENO        ANO        BNO START_DAT
+---------- ---------- ---------- ---------
+     99120 5529391101      98493
+     69251 8756234132      98492 06-JUL-80
+     69252 5128643098      98493 07-SEP-83
+     69253 2870285402      98494 13-AUG-88
+     69254 4611424890      98495 09-FEB-86
+
+
+
+##############################################################################################################
+
+
+
+SQL> SELECT *
+  2  FROM EMP_CUST;
+
+       ENO    CUST_NO
+---------- ----------
+     69251      13100
+     69252      14100
+     69254      16100
+
+
+##########################################################################################################
+
+
+SQL> SELECT *
+  2  FROM PER_A;
+
+       PNO        ANO        BNO START_DAT
+---------- ---------- ---------- ---------
+     78628  102133713      98492 13-JUN-06
+     78627 5533031071      98491 03-JUL-06
+
+
+
+######################################################################################################
+
+
+SQL> SELECT *
+  2  FROM PER_CUST;
+
+       PNO    CUST_NO
+---------- ----------
+     78628      18100
+     78627      17100
+
+
+#################################################################################################
+
+
+
+ SQL> SELECT *
+  2  FROM ATM;
+
+    ATM_NO STREET                    CITY            STATE
+---------- ------------------------- --------------- ---------------
+COUNTRY                BNO
+--------------- ----------
+     12120 Hall rd                   QUEENS          NEW YORK
+UNITED STATES        98492
+
+     12130 Blue Rd                   QUEENS          NEW YORK
+UNITED STATES        98493
+
+     12140 GREEN ST                  TEANECK         NEW JERSEY
+UNITED STATES        98494
+
+
+    ATM_NO STREET                    CITY            STATE
+---------- ------------------------- --------------- ---------------
+COUNTRY                BNO
+--------------- ----------
+     12150 YELLOW RD                 TEANECK         NEW JERSEY
+UNITED STATES        98495
+
+     12110 RIVER EDGE                TEANECK         NEW JERSEY
+UNITED STATES        98491
+
+
+
+#############################################################################################
+
+
+
+SQL>  SELECT *
+  2  FROM L;
+
+       LNO INDATE    INTIME       USERID
+---------- --------- ------------ -------------------------
+PASSWORD                  OUTDATE   OUTTIME      LOCATION
+------------------------- --------- ------------ --------------------
+     21003 04-JUN-10 04:30:33 PM  SOCLEAN
+JACK2002                  04-JUN-10 04:42:55 PM  NEW YORK
+
+     21004 11-MAY-10 01:30:22 PM  TOHOT
+SMITH2828                 11-MAY-10 01:42:55 PM  NEW YORK
+
+     21005 17-APR-10 09:54:33 AM  BUSINESSMAN
+20BALL02                  17-APR-10 09:57:55 AM  NEW JERSEY
+
+
+       LNO INDATE    INTIME       USERID
+---------- --------- ------------ -------------------------
+PASSWORD                  OUTDATE   OUTTIME      LOCATION
+------------------------- --------- ------------ --------------------
+     21006 23-MAR-10 03:36:33 PM  BIOMAN
+FINDME755                 23-MAR-10 03:42:55     NEW JERSEY
+
+     21002 13-SEP-10 06:30:33 PM  HHMGR
+WATER20                   13-SEP-10 06:32:55 PM  NEW JERSEY
+
+
+
+#############################################################################################
+
+
+
+
+SQL> SELECT *
+  2  FROM T;
+
+       TNO TDATE     TTIME        TYPE     AMOUNT CAT   FROM_BNO     TO_BNO
+---------- --------- ------------ ---- ---------- --- ---------- ----------
+  FROM_ANO     TO_ANO CASH CCHECK      BR_NO     ATM_NO  ONLINE_NO
+---------- ---------- ---- ------ ---------- ---------- ----------
+      9990 13-NOV-10 10:11:12 PM  C          4300 T        98491
+2232310409            N    N           80113
+
+      9991 18-NOV-10 09:30:30 AM  W           100 A        98492
+8756234132            Y    N                      12110
+
+      9992 20-NOV-10 08:08:08 AM  D           250 T                   98493
+           5128643098 N    Y           80111
+
+
+       TNO TDATE     TTIME        TYPE     AMOUNT CAT   FROM_BNO     TO_BNO
+---------- --------- ------------ ---- ---------- --- ---------- ----------
+  FROM_ANO     TO_ANO CASH CCHECK      BR_NO     ATM_NO  ONLINE_NO
+---------- ---------- ---- ------ ---------- ---------- ----------
+      9993 12-SEP-10 06:30:33 PM  x           500 O        98495      98491
+4611424890 2232310409                                        21002
+
+      9994 05-DEC-10 12:15:12 PM  D           800 A                   98494
+           2232310409 N    Y                      12120
+
+
+
+
+
+#######################################################################################################

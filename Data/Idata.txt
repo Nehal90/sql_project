@@ -1,0 +1,54 @@
+SQL> start Idata1.txt
+Input truncated to 76 characters
+  4  
+SQL> start Idata1.txt
+Input truncated to 77 characters
+
+1 row created.
+
+SQL> start Idata2.txt
+Input truncated to 73 characters
+
+1 row created.
+
+SQL> start Idata3.txt
+Input truncated to 86 characters
+
+1 row created.
+
+SQL> start Idata4.txt
+Input truncated to 73 characters
+
+1 row created.
+
+SQL> start Idata5.txt
+Input truncated to 89 characters
+
+1 row created.
+
+SQL> start Idata6.txt
+Input truncated to 75 characters
+
+1 row created.
+
+SQL> start Idata7.txt
+Input truncated to 76 characters
+
+1 row created.
+
+SQL> start Idata8.txt
+Input truncated to 77 characters
+
+1 row created.
+
+SQL> start Idata9.txt
+Input truncated to 66 characters
+
+1 row created.
+
+SQL> start Idata10.txt
+Input truncated to 67 characters
+
+1 row created.
+
+SQL> exit

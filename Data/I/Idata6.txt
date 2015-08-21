@@ -1,0 +1,3 @@
+INSERT
+INTO I
+VALUES ('7706482', 'Laptops', '10/14/96', 'Y', 'USA', 'Portable computer');
